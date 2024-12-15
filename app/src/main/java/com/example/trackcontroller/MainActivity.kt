@@ -17,8 +17,6 @@ import com.example.trackcontroller.ui.theme.TrackControllerTheme
 
 class MainActivity : ComponentActivity() {
 
-    private lateinit var volumeObserver: ContentObserver
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,11 +40,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        contentResolver.unregisterContentObserver(volumeObserver)
     }
 }
 
